@@ -1,49 +1,98 @@
+/* Importa una fuente desde Google Fonts llamada "Jersey 10". */
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+/* Resetea los márgenes y el relleno de todos los elementos y establece el tamaño de caja como border-box.
+   También establece la fuente por defecto para todo el documento. */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Jersey 10", sans-serif;
+}
+
+/* Estilo para el elemento body */
 body {
-    padding: 10px;
-    background-image: linear-gradient(37deg, rgb(32, 218, 233),rgb(40, 21, 236));}
+    /* Establece un fondo compuesto por múltiples gradientes lineales repetidos */
+    background-image: 
+        repeating-linear-gradient(135deg, hsla(264,0%,88%,0.03) 0px, hsla(264,0%,88%,0.03) 1px, transparent 1px, transparent 12px),
+        repeating-linear-gradient(45deg, hsla(264,0%,88%,0.03) 0px, hsla(264,0%,88%,0.03) 1px, transparent 1px, transparent 12px),
+        repeating-linear-gradient(67.5deg, hsla(264,0%,88%,0.03) 0px, hsla(264,0%,88%,0.03) 1px, transparent 1px, transparent 12px),
+        repeating-linear-gradient(135deg, hsla(264,0%,88%,0.03) 0px, hsla(264,0%,88%,0.03) 1px, transparent 1px, transparent 12px),
+        repeating-linear-gradient(45deg, hsla(264,0%,88%,0.03) 0px, hsla(264,0%,88%,0.03) 1px, transparent 1px, transparent 12px),
+        repeating-linear-gradient(112.5deg, hsla(264,0%,88%,0.03) 0px, hsla(264,0%,88%,0.03) 1px, transparent 1px, transparent 12px),
+        repeating-linear-gradient(112.5deg, hsla(264,0%,88%,0.03) 0px, hsla(264,0%,88%,0.03) 1px, transparent 1px, transparent 12px),
+        repeating-linear-gradient(45deg, hsla(264,0%,88%,0.03) 0px, hsla(264,0%,88%,0.03) 1px, transparent 1px, transparent 12px),
+        repeating-linear-gradient(22.5deg, hsla(264,0%,88%,0.03) 0px, hsla(264,0%,88%,0.03) 1px, transparent 1px, transparent 12px),
+        repeating-linear-gradient(45deg, hsla(264,0%,88%,0.03) 0px, hsla(264,0%,88%,0.03) 1px, transparent 1px, transparent 12px),
+        repeating-linear-gradient(22.5deg, hsla(264,0%,88%,0.03) 0px, hsla(264,0%,88%,0.03) 1px, transparent 1px, transparent 12px),
+        repeating-linear-gradient(135deg, hsla(264,0%,88%,0.03) 0px, hsla(264,0%,88%,0.03) 1px, transparent 1px, transparent 12px),
+        repeating-linear-gradient(157.5deg, hsla(264,0%,88%,0.03) 0px, hsla(264,0%,88%,0.03) 1px, transparent 1px, transparent 12px),
+        repeating-linear-gradient(67.5deg, hsla(264,0%,88%,0.03) 0px, hsla(264,0%,88%,0.03) 1px, transparent 1px, transparent 12px),
+        repeating-linear-gradient(67.5deg, hsla(264,0%,88%,0.03) 0px, hsla(264,0%,88%,0.03) 1px, transparent 1px, transparent 12px),
+        linear-gradient(90deg, rgb(151, 26, 210), rgb(57, 199, 205));
+    /* El fondo combina múltiples gradientes lineales repetidos para crear un patrón de rayas, 
+       con un gradiente lineal final de colores azul-violeta y verde-cyan. */
+}
 
+/* Estilo para el elemento con clase "card" */
 .card {
-    background-color: transparent;
-    text-align: center;
-    height: 600px;
-    width: 500px;
-    margin: 10px auto;
+    border: 1px solid black; /* Borde negro alrededor de la tarjeta */
+    background-color: #fff; /* Color de fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    height: 800px; /* Altura fija de 800 píxeles */
+    width: 500px; /* Ancho fijo de 500 píxeles */
+    margin: 45px auto; /* Márgenes superior e inferior de 45 píxeles y centrado horizontalmente */
+    text-align: center; /* Alineación del texto al centro */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); /* Sombra alrededor de la tarjeta */
+    display: grid; /* Utiliza el diseño de cuadrícula CSS */
+    grid-template-columns: 1fr; /* Una columna de ancho flexible */
+    grid-template-rows: 1fr 5fr 5fr 1fr; /* Cuatro filas con alturas proporcionadas */
 }
 
-.card__content {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-    background-color: #181818;
-    display: grid;
-    height: 600px;
-    width: 500px;
+/* Estilo para el primer hijo dentro de "card" */
+.card > :nth-child(1) {
+    width: 100%; /* Ancho completo del contenedor */
+    height: 100%; /* Altura completa del contenedor */
+    color: #FF00FF; /* Color del texto fucsia */
+    display: grid; /* Utiliza el diseño de cuadrícula CSS */
+    place-items: center; /* Centra el contenido tanto vertical como horizontalmente */
+    background-color: #4A4A4A; /* Color de fondo gris oscuro */
+    border: inherit; /* Hereda el borde del elemento padre */
+    font-size: 40px; /* Tamaño de fuente grande */
 }
 
-.card__title {
-    margin: 0px;
-    background-color: white;
-    color: #1E80FF;
-    font-size: 40px;
+/* Estilo para el segundo hijo dentro de "card" */
+.card > :nth-child(2) {
+    width: 100%; /* Ancho completo del contenedor */
+    height: 100%; /* Altura completa del contenedor */
 }
 
-img {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    margin: 10px auto;
+/* Estilo para el primer hijo dentro del segundo hijo de "card" */
+.card > :nth-child(2) > :nth-child(1) {
+    margin: 30px auto; /* Márgenes superior e inferior de 30 píxeles, centrado horizontalmente */
+    border: 1px solid black; /* Borde negro alrededor del círculo */
+    border-radius: 50%; /* Hace que el borde sea redondeado, creando un círculo */
 }
 
-.card__text {
-    color: white;
-    font-size: 16px;
+/* Estilo para el tercer hijo dentro de "card" */
+.card > :nth-child(3) {
+    width: 100%; /* Ancho completo del contenedor */
+    height: 100%; /* Altura completa del contenedor */
+    display: grid; /* Utiliza el diseño de cuadrícula CSS */
+    place-items: center; /* Centra el contenido tanto vertical como horizontalmente */
+    padding: 20px; /* Relleno de 20 píxeles */
+    font-size: 20px; /* Tamaño de fuente más pequeño */
 }
 
-.card__button {
-    background-color: white;
-    cursor: pointer;
-    height: 100%;
-}
-a{
-    text-decoration: none;
-    font-size: 40px;
-    color: #1E80FF;
+/* Estilo para el cuarto hijo dentro de "card" */
+.card > :nth-child(4) {
+    width: 100%; /* Ancho completo del contenedor */
+    height: 100%; /* Altura completa del contenedor */
+    color: #FF00FF; /* Color del texto fucsia */
+    display: grid; /* Utiliza el diseño de cuadrícula CSS */
+    place-items: center; /* Centra el contenido tanto vertical como horizontalmente */
+    background-color: #4A4A4A; /* Color de fondo gris oscuro */
+    border: inherit; /* Hereda el borde del elemento padre */
+    font-size: 40px; /* Tamaño de fuente grande */
+    cursor: pointer; /* Cambia el cursor a una mano cuando se pasa por encima */
 }

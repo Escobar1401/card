@@ -1,13 +1,17 @@
+// Espera a que el contenido del DOM esté completamente cargado antes de ejecutar el código
 document.addEventListener('DOMContentLoaded', function() {
+    // Selecciona el primer elemento con la clase 'card'
     const card = document.querySelector('.card');
 
-    // Agregar un evento para cuando se pase el ratón sobre la tarjeta
+    // Añade un evento de mouseover al elemento 'card'
     card.addEventListener('mouseover', function() {
-        card.style.transform = 'scale(1.1)'; // Ampliar la tarjeta
+        // Aumenta el tamaño del elemento 'card' en un 10% cuando el ratón pasa sobre él
+        card.style.transform = 'scale(1.1)';
     });
 
-    // Agregar un evento para cuando se retire el ratón de la tarjeta
+    // Añade un evento de mouseout al elemento 'card'
     card.addEventListener('mouseout', function() {
-        card.style.transform = 'scale(1)'; // Volver al tamaño original
+        // Restaura el tamaño del elemento 'card' al valor original cuando el ratón sale de él
+        card.style.transform = 'scale(1)'; 
     });
 });
